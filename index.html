@@ -8,6 +8,8 @@
     <style>
         body{
             background-color: red;
+            margin: 0;
+            padding: 0;
         }
         .painel{
             background-color: white;
@@ -38,6 +40,12 @@
             border: 2px solid white;
             border-radius: 10px;
             color: white
+        }
+
+        @media only screen and (max-width: 768px) {
+            .painel {
+                width: 90%; /* alterado para largura de 90% da tela */
+            }
         }
     </style>
 </head>
