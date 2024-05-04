@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai comigo?</title>
+
+    <style>
+        body{
+            background-color: red;
+        }
+        .painel{
+            background-color: white;
+            padding-top: 75px;
+            width: 750px;
+            height: 1350px;
+            margin: auto;
+            border-radius: 20px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #sim{
+            height: 40px;
+            width: 70px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -85px;
+        }
+        #nao{
+            position: absolute;
+            margin-left: 20px;
+            height: 40px;
+            width: 70px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="painel">
+        <h1>Você quer sair comigo?</h1>
+
+        <img src="https://i.pinimg.com/originals/99/73/b3/9973b35c7f823c86ee883f5ea4dff3b0.gif" alt="">
+
+        <h1></h1>
+        <h1></h1>
+        <h1>Você está convidada para dar uma volta na praça comigo!</h1>
+        <h3>LOCAL: Praça da Prefeitura // DIA E HORÁRIO: Domingo 05/05/2024 às 19:30</h1>
+        <h3>Você aceita?</h1>
+        <h1></h1>
+        <h1></h1>
+
+        <button onclick="alertzin()" id="sim"> Sim =) </button>
+        <button onmouseover="fuja()" onclick="fuja()" id="nao"> Não :/ </button>
+
+        <h1></h1>
+
+        <img src="https://www.orkugifs.com/images/Sinto-muito-carinho-por-voce..._1806.gif" alt="">
+    </div>
+
+</body>
+
+<script>
+    function alertzin(){
+        alert("BOA ESCOLHA, MARIA ;)")
+        window.open('https://youtu.be/n6fRUH8bahg', '_blank');
+
+    }
+
+    function fuja(){
+        var botaoNao = document.getElementById("nao");
+
+        var larguraJanela = window.innerWidth;
+        var alturaJanela = window.innerHeight;
+
+        var maxX = larguraJanela - botaoNao.offsetWidth;
+        var maxY = alturaJanela - botaoNao.offsetHeight;
+
+        var aleatorioX = Math.floor(Math.random() * maxX);
+        var aleatorioY = Math.floor(Math.random() * maxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px"
+    }
+</script>
+
+</html>
